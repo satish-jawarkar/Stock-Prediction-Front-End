@@ -1,5 +1,24 @@
 {
-    "user":[
-        
-    ]
+  "user": [
+    {
+      "id": "satish_jawarkar",
+      "name": "Satish JAwarkar",
+      "password": "qwertyuiop",
+      "email": "abc@gmail.com",
+      "phone": "123",
+      "country": "",
+      "address": "",
+      "gender": "male"
+    },
+    {
+      "id": "newuser",
+      "name": "new user",
+      "password": "newuser",
+      "email": "abcd@gmail.com",
+      "phone": "4321234",
+      "country": "",
+      "address": "",
+      "gender": "male"
+    }
+  ]
 }

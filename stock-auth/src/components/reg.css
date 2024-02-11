@@ -1,0 +1,4 @@
+.row{
+    backdrop-filter: blur(3px);
+    border: 3px solid red;
+}

@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <div className="App"> 
-      <ToastContainer> </ToastContainer>
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false}
+        pauseOnFocusLoss draggable pauseOnHover theme="dark" transition: Bounce> </ToastContainer>
         <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
