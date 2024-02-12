@@ -75,7 +75,7 @@ export default function Registration() {
         // console.log(localObject);
     }
 
-    const mainBG = ``
+    // const mainBG = ``
 
     
   return (
