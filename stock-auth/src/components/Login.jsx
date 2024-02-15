@@ -11,9 +11,18 @@ export default function Login() {
   const proceed = (e) => {
     e.preventDefault();
     if(validate()){
-      fetch('http://localhost:3000/user'+username).then((res)=>{
+      fetch('http://localhost:3000/user/'+username).then((res)=>{
         return res.json();
       }).then((resp)=>{
+        if(Object.keys(resp).length === 0){
+          toast.error("Please Enter Valid Username!")
+        }else{
+          if(resp.password === password){
+
+          }else{
+            toast.error("Please Enter Valid Credentials!!")
+          }
+        }
         console.log(resp)
       }).catch((err)=>{
         toast.error("Invalid Login"+err.message)

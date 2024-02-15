@@ -1,5 +1,14 @@
 {
   "user": [
-   
+    {
+      "id": "alexturner",
+      "name": "alex",
+      "password": "alex123",
+      "email": "alex@gmail.com",
+      "phone": "456789098765",
+      "country": "India",
+      "address": "",
+      "gender": "male"
+    }
   ]
 }

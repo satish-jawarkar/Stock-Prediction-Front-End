@@ -44,7 +44,7 @@ export default function Registration() {
             toast.warning(errormessage)
         }
         else{
-            if(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]\.[A-Za-z]+$/.test(email)){
+            if(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
 
             }else{
                 RightToProceed = false;
@@ -67,7 +67,7 @@ export default function Registration() {
                 body: JSON.stringify(localObject)
             }).then((res)=>{
                 toast.success("Registered Successfully!")
-                navigate('./login')
+                navigate('/login')
             }).catch((err)=>{
                 toast.error("Could Not be Able to register! Try after few minutes!", err.message)
             });
