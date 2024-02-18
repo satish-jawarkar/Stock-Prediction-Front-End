@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import registration from './Registration';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export default function Login() {
 
   const [username, updatedUsername] = useState('');
   const [password, updatedPassword] = useState('');
+  const usenavigate = useNavigate();
+
+  useEffect(()=>{
+    sessionStorage.clear();
+  })
 
   const proceed = (e) => {
     e.preventDefault();
@@ -18,7 +23,9 @@ export default function Login() {
           toast.error("Please Enter Valid Username!")
         }else{
           if(resp.password === password){
-
+            toast.success('Successfully Logged In');
+            sessionStorage.setItem('username', username);
+            usenavigate('/')
           }else{
             toast.error("Please Enter Valid Credentials!!")
           }
